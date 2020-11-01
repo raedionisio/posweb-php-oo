@@ -8,10 +8,10 @@
     $telefone = $_POST['telefone'];
     $email = $_POST['email'];
 
-    $cadastro = new Cadastro($nome, $telefone, $email);
+    $cadastro = new Cadastro();
     
-    $cadastro->inserir();
-
-    $cadastro->exibir();
+    $cadastro->inserir($nome, $telefone, $email);
+    
+    header("Location: lista_usuarios.php");
 
 ?>
